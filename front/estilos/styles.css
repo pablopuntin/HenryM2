@@ -1,0 +1,17 @@
+
+/* clases de bootstrap para el div cntenedor de las imagenes*/
+
+/*
+1- leer el contenedor donde vamos a insertar las cards.
+2- mapear el array con foreach, porque map modifica el arreglo.
+3- en el callback poner la funcion que necesito(leer cada objeto).
+
+*/
+h6{
+    color: aliceblue;
+}
+p{
+    color: aliceblue;
+    text-align: justify;
+    font-size: 1.2 em;
+}
