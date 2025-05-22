@@ -1,7 +1,8 @@
-const contenedor = document.getElementById("peliculas");
+ $.get("https://students-api.up.railway.app/movies").done((data) => {
+ const contenedor = document.getElementById("peliculas");
 
-tempData.forEach(pelicula =>{
-
+data.forEach(pelicula =>{
+    console.log(pelicula);
     const card = `
     <div class="col-xl-4 col-md-6 col-xs-10">
     <h6 class="titulo">${pelicula.title}</h6>
@@ -17,3 +18,13 @@ tempData.forEach(pelicula =>{
     `;
     contenedor.innerHTML += card;
 });
+ }).fail(() => {
+    alert("Fallo al cargar las imágenes.");
+  })
+  .always(() => {
+    console.log("La solicitud ha terminado (éxito o error).");
+    // Aquí podrías ocultar un spinner o volver a habilitar un botón
+  });
+
+
+
